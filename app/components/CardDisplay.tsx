@@ -12,7 +12,7 @@ import corner from "../assets/corner.png";
 
 const Card: FunctionComponent<CardProps> = ({ Icon, text1, text2 }) => {
   return (
-    <div className="w-48 flex flex-col gap-6 items-center justify-center">
+    <div className="w-54 h-80 flex flex-col px-8 gap-6 items-center justify-center hover:shadow-md">
       <div className="w-20">
         <div className="flex flex-row justify-between">
           <Image src={corner} alt="" />

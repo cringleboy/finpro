@@ -44,7 +44,7 @@ export const EmblaCarousel: FunctionComponent = (): ReactElement => {
                 <button
                   onClick={scrollPrev}
                   aria-label="Scroll previous"
-                  className="px-1 bg-[#6666669e] h-min"
+                  className="px-1 bg-[#6666666a] hover:bg-[#6666669e] h-min"
                 >
                   <ArrowBack />
                 </button>
@@ -58,7 +58,7 @@ export const EmblaCarousel: FunctionComponent = (): ReactElement => {
                 <button
                   onClick={scrollNext}
                   aria-label="Scroll forward"
-                  className="px-1 bg-[#6666669e] h-min"
+                  className="px-1 bg-[#6666666a] hover:bg-[#6666669e] h-min"
                 >
                   <ArrowForward />
                 </button>

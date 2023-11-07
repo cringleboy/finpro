@@ -22,7 +22,7 @@ const VideoSection: FunctionComponent = (): ReactElement => {
             <button
               aria-label="Plays video"
               onClick={() => setShowModal(true)}
-              className="p-3 bg-fpBlue opacity-[.66] rounded-full"
+              className="p-3 bg-fpBlue opacity-[.66] hover:opacity-100 rounded-full"
             >
               <Play />
             </button>
