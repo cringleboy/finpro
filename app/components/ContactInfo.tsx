@@ -1,26 +1,26 @@
-import React, { FunctionComponent, ReactElement, ReactNode } from "react";
+import React, { FunctionComponent, ReactElement } from "react";
+import SocialIcons from "./SocialIcons";
 import { LuAlarmClock as Clock } from "react-icons/lu";
-import { GrGooglePlus as Google } from "react-icons/gr";
 import { IoLocationOutline as Location } from "react-icons/io5";
 import { AiOutlinePhone as Phone } from "react-icons/ai";
-import {
-  BiLogoFacebook as Facebook,
-  BiLogoTwitter as Twitter,
-} from "react-icons/bi";
 import { IconContext, IconType } from "react-icons/lib";
 import Image from "next/image";
 import logo from "../assets/logo.png";
 
-interface ContactItemProps {
+export interface CardProps {
   Icon: IconType;
-  text1: string;
-  text2: string;
+  text1: string | ReactElement;
+  text2?: string;
+  text1Hover?: boolean;
+  text2Hover?: boolean;
 }
 
-const ContactItem: FunctionComponent<ContactItemProps> = ({
+const ContactItem: FunctionComponent<CardProps> = ({
   Icon,
   text1,
   text2,
+  text1Hover,
+  text2Hover,
 }) => {
   return (
     <div className="flex flex-row gap-2 items-center">
@@ -32,10 +32,21 @@ const ContactItem: FunctionComponent<ContactItemProps> = ({
       >
         <Icon />
       </IconContext.Provider>
-
       <div>
-        <p className="font-semibold">{text1}</p>
-        <p className="text-gray-500 font-light">{text2}</p>
+        <p
+          className={`${
+            text1Hover && "hover:text-fpBlue hover:cursor-pointer"
+          } font-semibold`}
+        >
+          {text1}
+        </p>
+        <p
+          className={`${
+            text2Hover && "hover:text-fpBlue hover:cursor-pointer"
+          } text-gray-500 font-light`}
+        >
+          {text2}
+        </p>
       </div>
     </div>
   );
@@ -46,39 +57,10 @@ const ContactInfo: FunctionComponent = (): ReactElement => {
     <div>
       <div className="py-3 bg-[#f2f2f5]">
         <div className="flex flex-row justify-between items-center w-[77%] m-auto">
-          <p className="text-[#666] text-sm">Welcome to FinPro, your expert in managing your finances!</p>
-          <div className="flex flex-row gap-3">
-            <IconContext.Provider
-              value={{
-                color: "#474747",
-                size: "1.1em",
-              }}
-            >
-              <button className="rounded-full p-1 w-7 h-7 bg-[#dfdfdf] flex justify-center">
-                <Facebook />
-              </button>
-            </IconContext.Provider>
-            <IconContext.Provider
-              value={{
-                color: "#474747",
-                size: "1.1em",
-              }}
-            >
-              <button className="rounded-full p-1 w-7 h-7 bg-[#dfdfdf] flex justify-center">
-                <Twitter />
-              </button>
-            </IconContext.Provider>
-            <IconContext.Provider
-              value={{
-                color: "#474747",
-                size: "1.1em",
-              }}
-            >
-              <button className="rounded-full p-1 w-7 h-7 bg-[#dfdfdf] flex justify-center">
-                <Google />
-              </button>
-            </IconContext.Provider>
-          </div>
+          <p className="text-[#666] text-sm">
+            Welcome to FinPro, your expert in managing your finances!
+          </p>
+          <SocialIcons />
         </div>
       </div>
       <div className="py-6">
@@ -94,11 +76,14 @@ const ContactInfo: FunctionComponent = (): ReactElement => {
               Icon={Location}
               text1="267 Park Avenue"
               text2="New York, NY 90210"
+              text2Hover
             />
             <ContactItem
               Icon={Phone}
               text1="(123) 456-7890"
               text2="info@demolink.org"
+              text1Hover
+              text2Hover
             />
           </div>
         </div>
