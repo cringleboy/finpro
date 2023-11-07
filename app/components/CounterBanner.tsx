@@ -14,7 +14,7 @@ const Counter: FunctionComponent<CounterProps> = ({ num, text }) => {
     enableScrollSpy: true,
   });
   return (
-    <div className="flex flex-col items-center">
+    <p className="flex flex-col items-center">
       <CountUp
         end={num}
         enableScrollSpy
@@ -31,20 +31,20 @@ const Counter: FunctionComponent<CounterProps> = ({ num, text }) => {
         )}
       </CountUp>
       {countStarted && <p className="font-light text-sm text-white">{text}</p>}
-    </div>
+    </p>
   );
 };
 
 const CounterBanner: FunctionComponent = (): ReactElement => {
   return (
-    <div className="w-full h-[26vh] bg-[#229dd1]">
+    <section className="w-full h-[26vh] bg-[#229dd1]">
       <div className="h-full m-auto w-[67%] flex flex-row justify-between items-center">
         <Counter num={275} text="Cases completed" />
         <Counter num={19} text="Consultants" />
         <Counter num={130} text="Awards won" />
         <Counter num={723} text="Happy clients" />
       </div>
-    </div>
+    </section>
   );
 };
 

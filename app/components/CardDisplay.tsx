@@ -42,7 +42,7 @@ const Card: FunctionComponent<CardProps> = ({ Icon, text1, text2 }) => {
 
 const CardDisplay: FunctionComponent = (): ReactElement => {
   return (
-    <div className="w-full h-[55vh]">
+    <section className="w-full h-[55vh]">
       <div className="h-full m-auto pt-20 w-[72%] flex flex-row justify-between items-start">
         <Card
           Icon={Check}
@@ -65,7 +65,7 @@ const CardDisplay: FunctionComponent = (): ReactElement => {
           text2="Tax planning considers the tax implications of business decisions, usually with the goal of minimizing tax liability."
         />
       </div>
-    </div>
+    </section>
   );
 };
 

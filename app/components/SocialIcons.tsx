@@ -25,13 +25,13 @@ const SocialIcon: FunctionComponent<SocialIconProps> = ({
         size: "1.1em",
       }}
     >
-      <button
+      <a
         className={`${
           darkTheme ? "bg-white" : "bg-[#dfdfdf]"
-        } rounded-full p-1 w-7 h-7 flex justify-center`}
+        } rounded-full p-1 w-7 h-7 flex justify-center hover:cursor-pointer`}
       >
         <Icon />
-      </button>
+      </a>
     </IconContext.Provider>
   );
 };

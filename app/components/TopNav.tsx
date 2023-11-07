@@ -32,7 +32,7 @@ const MenuCard: FunctionComponent<MenuCardProps> = ({ title, content }) => {
         <HoverCardContent
           className={`${
             title === "Blocks" ? "w-[75vw] mr-16 py-8" : "py-3 ml-32"
-          } rounded-none -mt-[1.5px]`}
+          } rounded-none -mt-[3.2px]`}
         >
           {content}
         </HoverCardContent>
@@ -123,7 +123,7 @@ const TopNav: FunctionComponent = (): ReactElement => {
           type="search"
           placeholder="Search..."
           hidden={!searchVisible}
-          className="bg-[#3c434f] rounded px-4 py-2 mb-3 text-sm text-[#9d9fa2] absolute right-40 w-[22%]"
+          className="bg-[#3c434f] rounded px-4 py-2 mb-3 text-sm text-[#9d9fa2] absolute right-40 w-[22%] outline-none"
         ></input>
         <IconContext.Provider
           value={{

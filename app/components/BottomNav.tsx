@@ -24,11 +24,7 @@ const NavColumn: FunctionComponent<NavColumnProps> = ({ header, content }) => {
   );
 };
 
-const ContactItem: FunctionComponent<CardProps> = ({
-  Icon,
-  text1,
-  text1Hover,
-}) => {
+const ContactItem: FunctionComponent<CardProps> = ({ Icon, text1 }) => {
   return (
     <div className="flex flex-row gap-6">
       <IconContext.Provider
@@ -46,7 +42,7 @@ const ContactItem: FunctionComponent<CardProps> = ({
 
 const BottomNav: FunctionComponent = (): ReactElement => {
   return (
-    <div className="flex justify-between pt-20 h-[55vh] px-[12%] bg-fpGray text-[.94rem]">
+    <section className="flex justify-between pt-20 h-[55vh] px-[12%] bg-fpGray text-[.94rem]">
       <div className="text-white font-light w-[23%] flex flex-col gap-5 mr-7">
         <Image src={logoLight} alt="logo" />
         <p className="mt-3">
@@ -158,7 +154,7 @@ const BottomNav: FunctionComponent = (): ReactElement => {
             <div className="pt-2 flex flex-row">
               <input
                 placeholder="E-Mail"
-                className="bg-[#f2fafd] rounded-l p-3  font-light"
+                className="bg-[#f2fafd] rounded-l p-3 outline-none font-light"
               ></input>
               <button className="bg-[#44bef1] hover:bg-[#62c8f3] text-white rounded-r px-5 text-[1.06rem]">
                 Send
@@ -167,7 +163,7 @@ const BottomNav: FunctionComponent = (): ReactElement => {
           </div>
         }
       />
-    </div>
+    </section>
   );
 };
 

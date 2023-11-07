@@ -54,7 +54,7 @@ const ContactItem: FunctionComponent<CardProps> = ({
 
 const ContactInfo: FunctionComponent = (): ReactElement => {
   return (
-    <div>
+    <section>
       <div className="py-3 bg-[#f2f2f5]">
         <div className="flex flex-row justify-between items-center w-[77%] m-auto">
           <p className="text-[#666] text-sm">
@@ -88,7 +88,7 @@ const ContactInfo: FunctionComponent = (): ReactElement => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
